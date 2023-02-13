@@ -167,8 +167,8 @@ open class Node(
         }
     }
 
-    override fun getLifecycle(): Lifecycle =
-        nodeLifecycle.lifecycle
+    override val lifecycle: Lifecycle
+        get() = nodeLifecycle.lifecycle
 
     override fun updateLifecycleState(state: Lifecycle.State) {
         if (lifecycle.currentState == state) return
